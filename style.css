@@ -1,0 +1,201 @@
+/* ===========================================================
+   Paisatges de la Comunitat Valenciana — fulls d'estil
+   =========================================================== */
+
+:root {
+  --blau-mar: #0e6ba8;
+  --blau-fosc: #0a3d5c;
+  --terra: #c96b3c;
+  --ocre: #e0a458;
+  --verd-alzina: #3d6b4f;
+  --crema: #fbf6ee;
+  --text-fosc: #2b2521;
+  --text-suau: #5a5048;
+  --ombra: 0 10px 30px rgba(20, 30, 40, 0.12);
+  --radi: 16px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Nunito Sans", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  color: var(--text-fosc);
+  background: var(--crema);
+  line-height: 1.55;
+}
+
+h1, h2 {
+  font-family: "Playfair Display", Georgia, serif;
+  margin: 0;
+}
+
+/* ---------- Hero ---------- */
+
+.hero {
+  position: relative;
+  padding: 5.5rem 1.5rem 4.5rem;
+  background: linear-gradient(155deg, var(--blau-fosc) 0%, var(--blau-mar) 55%, var(--ocre) 130%);
+  color: #fff;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 15% 110%, rgba(255,255,255,0.18), transparent 45%),
+    radial-gradient(circle at 90% -10%, rgba(255,255,255,0.15), transparent 40%);
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  max-width: 46rem;
+  margin: 0 auto;
+}
+
+.hero-kicker {
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.8rem;
+  font-weight: 700;
+  opacity: 0.85;
+  margin: 0 0 0.9rem;
+}
+
+.hero h1 {
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
+  line-height: 1.1;
+  margin-bottom: 1.1rem;
+}
+
+.hero-text {
+  font-size: 1.15rem;
+  opacity: 0.95;
+  margin: 0;
+}
+
+/* ---------- Intro ---------- */
+
+.intro {
+  max-width: 46rem;
+  margin: 3rem auto 1rem;
+  padding: 0 1.5rem;
+  text-align: center;
+  color: var(--text-suau);
+  font-size: 1.08rem;
+}
+
+/* ---------- Gallery ---------- */
+
+.gallery {
+  max-width: 72rem;
+  margin: 2.5rem auto 4rem;
+  padding: 0 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  margin: 0;
+  background: #fff;
+  border-radius: var(--radi);
+  overflow: hidden;
+  box-shadow: var(--ombra);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px rgba(20, 30, 40, 0.18);
+}
+
+.card-img {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  background: linear-gradient(135deg, var(--blau-mar), var(--verd-alzina));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.fallback-icon {
+  display: none;
+  font-size: 2.8rem;
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.25));
+}
+
+/* Quan la imatge real no existeix (404), .fallback s'afig via onerror
+   i mostrem una icona decorativa en lloc d'una icona de trencat */
+.card-img.fallback {
+  background: linear-gradient(135deg, var(--blau-mar), var(--ocre));
+}
+
+.card-img.fallback .fallback-icon {
+  display: block;
+}
+
+.card figcaption {
+  padding: 1.3rem 1.4rem 1.6rem;
+}
+
+.card h2 {
+  font-size: 1.25rem;
+  color: var(--blau-fosc);
+  margin-bottom: 0.2rem;
+}
+
+.card .loc {
+  margin: 0 0 0.6rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--terra);
+}
+
+.card p:not(.loc) {
+  margin: 0;
+  color: var(--text-suau);
+  font-size: 0.97rem;
+}
+
+/* ---------- Footer ---------- */
+
+.site-footer {
+  text-align: center;
+  padding: 1.8rem 1.5rem 3rem;
+  color: var(--text-suau);
+  font-size: 0.85rem;
+}
+
+.site-footer code {
+  background: rgba(0,0,0,0.06);
+  padding: 0.1rem 0.4rem;
+  border-radius: 4px;
+}
+
+/* ---------- Responsive tweaks ---------- */
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 4rem 1.2rem 3.2rem;
+  }
+}

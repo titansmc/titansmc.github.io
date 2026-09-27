@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paisatges de la Comunitat Valenciana</title>
+<meta name="description" content="Un recorregut fotogràfic pels paisatges més emblemàtics de la Comunitat Valenciana: costa, aiguamolls, muntanya i interior.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="hero">
+    <div class="hero-content">
+      <p class="hero-kicker">Comunitat Valenciana</p>
+      <h1>Paisatges valencians</h1>
+      <p class="hero-text">De l'Albufera a la mar, de les valls interiors als penya-segats de la costa: un recorregut per alguns dels racons més bells del País Valencià.</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="intro">
+      <p>La Comunitat Valenciana amaga una diversitat de paisatges sorprenent en poc espai: aiguamolls i arrossars, penyals que s'endinsen a la Mediterrània, gorges d'aigua turquesa i boscos d'alzines centenàries. Ací en tens una petita mostra, de nord a sud.</p>
+    </section>
+
+    <section class="gallery" aria-label="Galeria de paisatges">
+
+      <figure class="card">
+        <div class="card-img">
+          <img src="images/albufera.jpg" alt="L'Albufera de València al capvespre" loading="lazy"
+               onerror="this.closest('.card-img').classList.add('fallback'); this.remove();">
+          <span class="fallback-icon" aria-hidden="true">🌾</span>
+        </div>
+        <figcaption>
+          <h2>L'Albufera de València</h2>
+          <p class="loc">València</p>
+          <p>Un dels aiguamolls més importants d'Europa, envoltat d'arrossars i famós per les seues postes de sol sobre l'aigua.</p>
+        </figcaption>
+      </figure>
+
+      <figure class="card">
+        <div class="card-img">
+          <img src="images/chulilla.jpg" alt="Ponts penjants de Chulilla sobre el riu Túria" loading="lazy"
+               onerror="this.closest('.card-img').classList.add('fallback'); this.remove();">
+          <span class="fallback-icon" aria-hidden="true">🏞️</span>
+        </div>
+        <figcaption>
+          <h2>Els ponts penjants de Chulilla</h2>
+          <p class="loc">València</p>
+          <p>Els congosts del riu Túria, amb passarel·les que travessen aigües turqueses entre altes parets de roca.</p>
+        </figcaption>
+      </figure>
+
+      <figure class="card">
+        <div class="card-img">
+          <img src="images/peniscola.jpg" alt="Castell de Peníscola vora la mar" loading="lazy"
+               onerror="this.closest('.card-img').classList.add('fallback'); this.remove();">
+          <span class="fallback-icon" aria-hidden="true">🏰</span>
+        </div>
+        <figcaption>
+          <h2>El castell de Peníscola</h2>
+          <p class="loc">Castelló</p>
+          <p>Una península fortificada que s'endinsa a la Mediterrània, coneguda popularment com «la ciutat en la mar».</p>
+        </figcaption>
+      </figure>
+
+      <figure class="card">
+        <div class="card-img">
+          <img src="images/montanejos.jpg" alt="Banys termals de Montanejos al riu Millars" loading="lazy"
+               onerror="this.closest('.card-img').classList.add('fallback'); this.remove();">
+          <span class="fallback-icon" aria-hidden="true">♨️</span>
+        </div>
+        <figcaption>
+          <h2>Montanejos i el riu Millars</h2>
+          <p class="loc">Castelló</p>
+          <p>Aigües termals a l'aire lliure, enmig d'un interior muntanyós ple de barrancs i fonts naturals.</p>
+        </figcaption>
+      </figure>
+
+      <figure class="card">
+        <div class="card-img">
+          <img src="images/calp.jpg" alt="Penyal d'Ifac vist des de la platja de Calp" loading="lazy"
+               onerror="this.closest('.card-img').classList.add('fallback'); this.remove();">
+          <span class="fallback-icon" aria-hidden="true">⛰️</span>
+        </div>
+        <figcaption>
+          <h2>El Penyal d'Ifac, Calp</h2>
+          <p class="loc">Alacant</p>
+          <p>Un imponent penyal de 332 metres que s'alça de sobte just damunt del mar, a la costa nord d'Alacant.</p>
+        </figcaption>
+      </figure>
+
+      <figure class="card">
+        <div class="card-img">
+          <img src="images/font-roja.jpg" alt="Bosc del Parc Natural de la Font Roja, Alcoi" loading="lazy"
+               onerror="this.closest('.card-img').classList.add('fallback'); this.remove();">
+          <span class="fallback-icon" aria-hidden="true">🌳</span>
+        </div>
+        <figcaption>
+          <h2>La Font Roja, Alcoi</h2>
+          <p class="loc">Alacant</p>
+          <p>Un dels boscos millor conservats de la Comunitat Valenciana, amb alzinars i fagedes centenàries.</p>
+        </figcaption>
+      </figure>
+
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Pàgina estàtica creada per a GitHub Pages · Substitueix les imatges de la carpeta <code>images/</code> per fotos pròpies o lliures de drets (mira <code>images/COM-AFEGIR-FOTOS.md</code>).</p>
+  </footer>
+
+</body>
+</html>
